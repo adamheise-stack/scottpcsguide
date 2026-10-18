@@ -1,0 +1,9 @@
+{
+  "housing": { "title": "Housing & Neighborhoods", "url": "/housing/" },
+  "schools": { "title": "Schools", "url": "/schools/" },
+  "bah": { "title": "BAH", "url": "/bah/" },
+  "childcare": { "title": "Childcare", "url": "/childcare/" },
+  "moving": { "title": "Moving Checklist", "url": "/moving-checklist/" },
+  "local-services": { "title": "Local Services", "url": "/local-services/" },
+  "things-to-do": { "title": "Things to Do", "url": "/things-to-do/" }
+}

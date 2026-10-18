@@ -1,0 +1,58 @@
+# Build the Eleventy site and deploy it to GitHub Pages.
+# One-time setup: repo Settings > Pages > Source: "GitHub Actions".
+# Optional repo variables (Settings > Secrets and variables > Actions > Variables):
+#   SITE_URL     full public URL incl. path, e.g. https://USERNAME.github.io/pcstoscott
+#   PATH_PREFIX  e.g. /pcstoscott/ for a project site; "/" for a custom domain or user site
+#   CF_ANALYTICS_TOKEN  optional Cloudflare Web Analytics token
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 11 * * 1"   # weekly Monday rebuild so dated sponsor slots start/expire on time
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Build
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          CF_ANALYTICS_TOKEN: ${{ vars.CF_ANALYTICS_TOKEN }}
+        run: npx eleventy --pathprefix="${{ vars.PATH_PREFIX || '/' }}"
+      - name: Check links, disclaimers, sponsored rel
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+          PATH_PREFIX: ${{ vars.PATH_PREFIX || '/' }}
+        run: node scripts/check-links.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

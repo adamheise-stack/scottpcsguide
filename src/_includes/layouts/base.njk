@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- set pageTitle = (title + " | " + site.name) if title and page.url != "/" else (site.name + " | " + site.tagline) %}
+{%- set canonical = page.url | absUrl(site.url) %}
+{%- set ogImg = site.ogImage | absUrl(site.url) %}
+<title>{{ seoTitle or pageTitle }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+{% if noindex %}<meta name="robots" content="noindex">{% endif %}
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:type" content="{{ 'article' if layout == 'layouts/guide.njk' else 'website' }}">
+<meta property="og:title" content="{{ title or site.name }}">
+<meta name="twitter:title" content="{{ title or site.name }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ ogImg }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ ogImg }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d3557">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": site.name,
+  "url": site.url + "/",
+  "description": site.tagline,
+  "inLanguage": "en-US",
+  "publisher": { "@type": "Organization", "name": site.name, "url": site.url + "/", "logo": site.ogImage | absUrl(site.url) }
+} | json | safe }}</script>
+{%- if breadcrumbs %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs | breadcrumbLd(site.url)
+} | json | safe }}</script>
+{%- endif %}
+{% block schema %}{% endblock %}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">{{ site.name }}<span class="brand__sub">Scott AFB, IL · Independent guide</span></a>
+  </div>
+  <nav class="site-nav" aria-label="Main">
+    <ul class="wrap">
+    {%- for item in nav %}
+      <li><a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+    {%- endfor %}
+    </ul>
+  </nav>
+</header>
+<main id="main" class="wrap">
+{% block main %}{{ content | safe }}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="disclaimer"><strong>Independent site.</strong> {{ site.name }} is not affiliated with or endorsed by the U.S. Air Force, the Department of Defense, or Scott Air Force Base. Information may change; always verify with official sources before making decisions. Sponsored content is always labeled. <a href="/disclaimer/">Full disclaimer</a>.</p>
+    <ul class="footer-links">
+      <li><a href="/about/">About</a></li>
+      <li><a href="/disclaimer/">Disclaimer</a></li>
+      <li><a href="/privacy/">Privacy</a></li>
+      <li><a href="/guides/">All guides</a></li>
+      <li><a href="/about/#sponsorship">Sponsorship</a></li>
+    </ul>
+    <p class="small">&copy; 2026 {{ site.name }}</p>
+  </div>
+</footer>
+{%- if site.cfAnalyticsToken %}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cfAnalyticsToken }}"}'></script>
+{%- endif %}
+</body>
+</html>

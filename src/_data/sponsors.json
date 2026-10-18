@@ -1,0 +1,30 @@
+{
+  "_readme": "Paid placements, matching ads/rate-card.md. Empty arrays / null = 'Sponsor slot - available' placeholders. See README.md > Sponsor slots for slot ids, where they render, and the entry format. Every entry renders labeled and every link gets rel=\"sponsored noopener\" automatically. Entries only render between start and end (YYYY-MM-DD, inclusive, evaluated at build time), so rebuild when a placement starts or ends.",
+  "_exampleEntry": {
+    "name": "Example Movers LLC",
+    "text": "Family-owned movers serving the Metro East. Up to 40 words.",
+    "offer": "10% military discount (terms set by the business)",
+    "url": "https://example.com",
+    "phone": "618-555-0100",
+    "logo": "/assets/sponsors/example-movers.webp",
+    "cta": "Visit website",
+    "founding": false,
+    "start": "2026-11-01",
+    "end": "2026-11-30"
+  },
+  "homepageBanner": {
+    "_slot": "home-banner",
+    "_note": "Rate card #3. Max 3 rotating sponsors (or 1 exclusive). Shows on the homepage and the New-to-Scott start page (first-week guide).",
+    "max": 3,
+    "sponsors": []
+  },
+  "categories": {
+    "housing":        { "label": "Housing & Neighborhoods", "directoryCategories": ["Realtors", "VA lenders", "Property management & rentals"], "exclusiveSponsor": null, "featured": [] },
+    "schools":        { "label": "Schools", "directoryCategories": ["Tutoring", "Private schools", "Enrichment"], "exclusiveSponsor": null, "featured": [] },
+    "bah":            { "label": "BAH", "directoryCategories": ["VA lenders", "Renters/auto insurance", "Financial services (no payday/high-cost lenders)"], "exclusiveSponsor": null, "featured": [] },
+    "childcare":      { "label": "Childcare", "directoryCategories": ["Childcare & daycare", "Babysitting", "Kids activities"], "exclusiveSponsor": null, "featured": [] },
+    "moving":         { "label": "Moving Checklist", "directoryCategories": ["Movers & storage", "Move-out cleaning", "Pet transport"], "exclusiveSponsor": null, "featured": [] },
+    "local-services": { "label": "Local Services", "directoryCategories": ["Pet boarding & vets", "Car dealers & auto service", "Insurance", "Other local services"], "exclusiveSponsor": null, "featured": [] },
+    "things-to-do":   { "label": "Things to Do", "directoryCategories": ["Family attractions", "Restaurants", "Recreation"], "exclusiveSponsor": null, "featured": [] }
+  }
+}

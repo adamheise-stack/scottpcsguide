@@ -1,0 +1,30 @@
+{% extends "layouts/base.njk" %}
+{% block main %}
+<div class="layout">
+  <div class="content prose">
+    {% include "breadcrumbs.njk" %}
+    {% if section %}{% categorySponsor section %}{% endif %}
+    <h1>{{ title }}</h1>
+    {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+    {% if updated %}<p class="meta"><strong>Last verified <time datetime="{{ updated | isoDate }}">{{ updated | readableDate }}</time></strong></p>{% endif %}
+    {{ content | safe }}
+    {%- if section %}
+    {%- set related = collections.guides | selectattr("data.section", "equalto", section) %}
+    <h2>Guides in this section</h2>
+    {%- if related.length %}
+    <ul class="guide-list">
+      {%- for g in related %}<li><a href="{{ g.url }}">{{ g.data.title }}</a> <span class="small">Last verified {{ (g.data.updated or g.date) | readableDate }}</span></li>{% endfor %}
+    </ul>
+    {%- else %}
+    <p class="coming-soon">A full guide for this section is coming soon. Until then, the official links above are the best place to start.</p>
+    {%- endif %}
+    {%- endif %}
+  </div>
+  {%- if not hideSidebar %}
+  <div class="sidebar">
+    {% if section %}{% featuredListings section %}{% endif %}
+    {% include "related.njk" %}
+  </div>
+  {%- endif %}
+</div>
+{% endblock %}

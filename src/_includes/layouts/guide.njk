@@ -1,0 +1,37 @@
+{% extends "layouts/base.njk" %}
+{% block schema %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "datePublished": date | isoDate,
+  "dateModified": (updated or date) | isoDate,
+  "mainEntityOfPage": page.url | absUrl(site.url),
+  "image": site.ogImage | absUrl(site.url),
+  "author": { "@type": "Organization", "name": site.name, "url": site.url + "/" },
+  "publisher": { "@type": "Organization", "name": site.name, "url": site.url + "/" },
+  "inLanguage": "en-US"
+} | json | safe }}</script>
+{%- if faq %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq | faqLd
+} | json | safe }}</script>
+{%- endif %}
+{% endblock %}
+{% block main %}
+<div class="layout">
+  <article class="content prose">
+    {% include "breadcrumbs.njk" %}
+    {% if sponsoredBy %}{% sponsoredArticleLabel sponsoredBy %}{% elif section %}{% categorySponsor section %}{% endif %}
+    <h1>{{ title }}</h1>
+    <p class="meta">Published <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% if updated %} · <strong>Last verified <time datetime="{{ updated | isoDate }}">{{ updated | readableDate }}</time></strong>{% endif %}</p>
+    {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+    {% if sponsoredBy %}<div data-sponsored-content>{{ content | safe }}</div><!--/sponsored-content-->{% else %}{{ content | safe }}{% endif %}
+    <p class="verify-note">Spotted something outdated? Rules, rates, and phone numbers change. Please verify with the official source linked above, and let us know so we can fix it.</p>
+  </article>
+  <div class="sidebar">{% include "related.njk" %}</div>
+</div>
+{% endblock %}

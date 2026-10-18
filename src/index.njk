@@ -1,0 +1,34 @@
+---
+layout: layouts/base.njk
+seoTitle: "Scott AFB PCS Guide for Military Families | PCS to Scott"
+description: "Free, independent guides for military families PCSing to Scott AFB, Illinois: housing, schools, 2026 BAH, childcare, and a first-week checklist, sourced."
+---
+<div class="layout">
+<div class="content prose">
+  <h1>Moving to Scott AFB? Welcome to the neighborhood.</h1>
+  <p class="lede">{{ site.name }} is a free, independent guide for military families PCSing to or living at Scott Air Force Base in the Illinois side of the St. Louis metro. We gather what's useful, link the official sources, and date our facts so you know how fresh they are.</p>
+
+  {% sponsorBanner %}
+
+  <h2>Start here</h2>
+  <ul class="cards">
+  {%- for g in collections.guides %}
+    <li class="card"><h3><a href="{{ g.url }}">{{ g.data.title }}</a></h3><p>{{ g.data.description }}</p><p class="small">Last verified {{ (g.data.updated or g.date) | readableDate }}</p></li>
+  {%- endfor %}
+  </ul>
+
+  <h2>Browse by topic</h2>
+  <ul class="cards">
+    <li class="card"><h3><a href="/housing/">Housing &amp; Neighborhoods</a></h3><p>On-base privatized housing, the housing referral office, and nearby communities.</p></li>
+    <li class="card"><h3><a href="/schools/">Schools</a></h3><p>How school assignment works on and off base, and who can help.</p></li>
+    <li class="card"><h3><a href="/bah/">BAH</a></h3><p>2026 Scott AFB housing allowance rates and how they compare to local rents.</p></li>
+    <li class="card"><h3><a href="/childcare/">Childcare</a></h3><p>Finding care, plus PCS childcare help for Air and Space Force families.</p></li>
+    <li class="card"><h3><a href="/moving-checklist/">Moving Checklist</a></h3><p>A practical PCS checklist with official planning tools.</p></li>
+    <li class="card"><h3><a href="/local-services/">Local Services</a></h3><p>Transit, utilities, and key support offices.</p></li>
+    <li class="card"><h3><a href="/things-to-do/">Things to Do</a></h3><p>Getting out and enjoying the Metro East and St. Louis.</p></li>
+  </ul>
+
+  <div class="callout"><p><strong>Heads up:</strong> we're an independent site, not an official Air Force or DoD resource. For anything that affects your orders, pay, or housing, confirm with the official office we link.</p></div>
+</div>
+<div class="sidebar">{% include "related.njk" %}</div>
+</div>

@@ -1,0 +1,14 @@
+{#- Hub-and-spoke internal links: start-here hub + sibling sections. -#}
+<nav class="related" aria-label="Related topics">
+  <h2 class="related__title">Start here</h2>
+  <ul>
+    <li><a href="/guides/scott-afb-pcs-first-week-guide/">PCS to Scott AFB: first-week checklist</a></li>
+    <li><a href="/guides/scott-afb-bah-rates-2026/">Scott AFB BAH rates 2026</a></li>
+  </ul>
+  <h2 class="related__title">Topics</h2>
+  <ul>
+  {%- for key, s in sections %}{% if key != section or page.url != s.url %}
+    <li><a href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.title }}</a></li>
+  {%- endif %}{% endfor %}
+  </ul>
+</nav>
