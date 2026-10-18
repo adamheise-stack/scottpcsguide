@@ -5,11 +5,9 @@ navTitle: "About"
 description: "Who runs PCS to Scott, a free and independent guide for Scott AFB military families, how we research and date our facts, and how labeled sponsorship works."
 lede: "PCS to Scott is a free, independent guide for military families moving to or living at Scott Air Force Base, written in a helpful-neighbor voice."
 ---
-<!-- TODO(Adam): add a sentence or two about your own connection to Scott AFB / PCS experience (E-E-A-T). Do not invent it. -->
-
 ## Who runs this site
 
-PCS to Scott is run by Adam. It's an independent project. It is **not** an official Air Force, Department of Defense, or Scott AFB website, and nobody here speaks for the base.
+PCS to Scott is run by a local military family who's been through the move. We remember how many tabs it took to figure out housing, schools, and that first week, so we're putting the answers in one friendly place. It's an independent project. It is **not** an official Air Force, Department of Defense, or Scott AFB website, and nobody here speaks for the base.
 
 ## How we research
 

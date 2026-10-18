@@ -8,8 +8,8 @@ const root = new URL("../_site/", import.meta.url).pathname;
 const files = [];
 (function walk(d) { for (const f of readdirSync(d)) { const p = join(d, f); statSync(p).isDirectory() ? walk(p) : files.push(p); } })(root);
 const html = files.filter((f) => f.endsWith(".html"));
-const siteUrl = (process.env.SITE_URL || "https://pcstoscott.pages.dev").replace(/\/$/, "");
-const prefix = ("/" + (process.env.PATH_PREFIX || "/") + "/").replace(/\/+/g, "/");
+const siteUrl = (process.env.SITE_URL || "https://adamheise-stack.github.io/pcstoscott").replace(/\/$/, "");
+const prefix = ("/" + (process.env.PATH_PREFIX || "/pcstoscott/") + "/").replace(/\/+/g, "/");
 let errors = 0, external = new Set();
 const fail = (m) => { errors++; console.error("ERROR", m); };
 

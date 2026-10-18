@@ -5,8 +5,7 @@
   "scripts": {
     "build": "eleventy",
     "serve": "eleventy --serve",
-    "build:gh": "eleventy --pathprefix=${PATH_PREFIX:-/}",
-    "check": "node scripts/check-links.mjs"
+        "check": "node scripts/check-links.mjs"
   },
   "author": "",
   "license": "UNLICENSED",

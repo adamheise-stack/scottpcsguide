@@ -13,6 +13,8 @@ lede: "The everyday stuff: getting around, getting set up, and who to call."
 - **SCCTD Flyer:** an on-demand shared ride that the St. Clair County Transit District runs in a [Scott AFB service zone](https://scctd.org/scott-air-force-base-safb-flyer-service-zone/). Checked October 18, 2026, fares were $3 per one-way trip within the base zone.
 - **MidAmerica St. Louis Airport:** SCCTD runs a [shuttle](https://scctd.org/services/midamerica-airport-shuttle/) between the Shiloh-Scott MetroLink station and the airport terminal.
 
+- **Visitor passes and base access:** see our [visitor center and gate info](/visitor-center/) page, which links only to official sources.
+
 ## Support offices
 
 - **Military & Family Readiness Center:** 618-256-8668 ([scottmfrc.com](https://scottmfrc.com/Relocation-Assistance))
