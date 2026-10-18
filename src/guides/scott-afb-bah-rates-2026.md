@@ -1,7 +1,7 @@
 ---
 layout: layouts/guide.njk
 title: "Scott AFB BAH Rates 2026: Full Table and What It Covers Locally"
-seoTitle: "Scott AFB BAH Rates 2026: Full Table | PCS to Scott"
+seoTitle: "Scott AFB BAH Rates 2026: Full Table | Scott PCS Guide"
 description: "2026 BAH at Scott AFB (MHA IL093): E-5 with dependents gets $1,542/mo, O-3 $2,208. Full table for every grade, plus how it compares to local rents."
 keyword: "Scott AFB BAH rates 2026"
 section: bah

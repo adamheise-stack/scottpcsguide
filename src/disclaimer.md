@@ -1,13 +1,13 @@
 ---
 layout: layouts/page.njk
 title: "Disclaimer"
-description: "PCS to Scott is independent and not affiliated with or endorsed by the U.S. Air Force, DoD, or Scott AFB. Info may change, so verify with official sources."
+description: "Scott PCS Guide is independent and not affiliated with or endorsed by the U.S. Air Force, DoD, or Scott AFB. Info may change, so verify with official sources."
 lede: "Please read this before relying on anything on this site."
 hideSidebar: true
 ---
 ## Independent site
 
-PCS to Scott is an independent website. It is **not affiliated with, endorsed by, or sponsored by the U.S. Air Force, the Department of Defense, Scott Air Force Base, or any government agency.** Any mention of official organizations is for informational purposes only.
+Scott PCS Guide is an independent website. It is **not affiliated with, endorsed by, or sponsored by the U.S. Air Force, the Department of Defense, Scott Air Force Base, or any government agency.** Any mention of official organizations is for informational purposes only.
 
 ## Information may change
 

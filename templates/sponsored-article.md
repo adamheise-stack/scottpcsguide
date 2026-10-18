@@ -8,7 +8,7 @@
 # "military-approved" or use DoD/USAF insignia. Adam approves before publishing.
 layout: layouts/guide.njk
 title: "VA Loan Basics for Scott AFB Homebuyers"        # H1 + og:title
-seoTitle: "VA Loan Basics Near Scott AFB | PCS to Scott" # <title>, under 60 chars
+seoTitle: "VA Loan Basics Near Scott AFB | Scott PCS Guide" # <title>, under 60 chars
 description: "140-155 characters with the main answer in it."
 keyword: "va loan scott afb"
 section: housing            # housing | schools | bah | childcare | moving | local-services | things-to-do

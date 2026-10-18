@@ -1,7 +1,7 @@
 ---
 layout: layouts/guide.njk
 title: "PCS to Scott AFB: Newcomers Checklist and First-Week Guide (2026)"
-seoTitle: "PCS to Scott AFB: First-Week Checklist | PCS to Scott"
+seoTitle: "PCS to Scott AFB: First-Week Checklist | Scott PCS Guide"
 description: "PCS to Scott AFB checklist for 2026: what to do 60, 30, and 7 days out and in week one, from lodging and housing to schools and finance. Official links."
 keyword: "PCS to Scott AFB"
 section: moving

@@ -1,7 +1,7 @@
 ---
 layout: layouts/page.njk
 title: "Privacy"
-description: "PCS to Scott privacy notice: no accounts, no cookies, no ad trackers. We may use cookie-free Cloudflare Web Analytics for aggregate visit counts only."
+description: "Scott PCS Guide privacy notice: no accounts, no cookies, no ad trackers. We may use cookie-free Cloudflare Web Analytics for aggregate visit counts only."
 lede: "Short version: we don't collect personal information."
 hideSidebar: true
 ---

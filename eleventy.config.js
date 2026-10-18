@@ -50,8 +50,8 @@ export default function (eleventyConfig) {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
-    // GitHub Pages project site lives at /pcstoscott/. Override with PATH_PREFIX=/ for a
+    // GitHub Pages project site lives at /scottpcsguide/. Override with PATH_PREFIX=/ for a
     // custom domain or Cloudflare Pages (CLI --pathprefix also overrides).
-    pathPrefix: process.env.PATH_PREFIX || "/pcstoscott/",
+    pathPrefix: process.env.PATH_PREFIX || "/scottpcsguide/",
   };
 }
