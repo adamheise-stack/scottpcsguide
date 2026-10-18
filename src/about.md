@@ -1,6 +1,7 @@
 ---
 layout: layouts/page.njk
 title: "About Scott PCS Guide"
+seoTitle: "About Us | Scott PCS Guide"
 navTitle: "About"
 description: "Who runs Scott PCS Guide, a free and independent guide for Scott AFB military families, how we research and date our facts, and how labeled sponsorship works."
 lede: "Scott PCS Guide is a free, independent guide for military families moving to or living at Scott Air Force Base, written in a helpful-neighbor voice."
