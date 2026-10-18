@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if page.url == "/" %}<meta name="google-site-verification" content="1rvtO4WCyC0HDKCR12aaDVhucXQzWaS9f-cbW2_BKrI" />{% endif %}
 {%- set pageTitle = (title + " | " + site.name) if title and page.url != "/" else (site.name + " | " + site.tagline) %}
 {%- set canonical = page.url | absUrl(site.url) %}
 {%- set ogImg = site.ogImage | absUrl(site.url) %}
