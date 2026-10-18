@@ -1,4 +1,13 @@
 {% extends "layouts/base.njk" %}
+{% block schema %}
+{%- if faq %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq | faqLd
+} | json | safe }}</script>
+{%- endif %}
+{% endblock %}
 {% block main %}
 {%- set sec = sections[section] if section else null %}
 {%- set heroIcon = icon or (section if sec else ("list" if page.url == "/guides/" else "compass")) %}
@@ -19,7 +28,15 @@
 <div class="wrap">
 <div class="layout{% if hideSidebar %} layout--single{% endif %}">
   <div class="content prose">
-    {{ content | safe }}
+    {%- set body = content | headingIds %}
+    {%- set tocItems = body | toc %}
+    {%- if section and tocItems.length > 3 %}
+    <details class="toc toc--inline toc--page">
+      <summary>{% icon "list" %} On this page</summary>
+      <nav aria-label="On this page"><ol>{% for t in tocItems %}<li><a href="#{{ t.id }}">{{ t.text | safe }}</a></li>{% endfor %}</ol></nav>
+    </details>
+    {%- endif %}
+    {{ body | safe }}
     {%- if section %}
     {%- set related = collections.guides | selectattr("data.section", "equalto", section) %}
     <h2>Guides in this section</h2>

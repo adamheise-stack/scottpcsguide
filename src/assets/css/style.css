@@ -169,7 +169,7 @@ caption{caption-side:bottom;padding:.5rem .8rem;font-size:.85rem;color:var(--mut
 .toc--inline summary{cursor:pointer;padding:.8rem 1rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:.5rem}
 .toc--inline nav{padding:0 .6rem .8rem}
 .toc--side{margin-bottom:1.75rem}
-@media (min-width:60rem){.toc--inline{display:none}}
+@media (min-width:60rem){.toc--inline{display:none}.toc--page{display:block}}
 @media (max-width:59.99rem){.toc--side{display:none}}
 
 /* Cards (guides) */

@@ -35,8 +35,21 @@
   "url": site.url + "/",
   "description": site.tagline,
   "inLanguage": "en-US",
-  "publisher": { "@type": "Organization", "name": site.name, "url": site.url + "/", "logo": site.ogImage | absUrl(site.url) }
+  "publisher": { "@type": "Organization", "@id": site.url + "/#organization", "name": site.name, "url": site.url + "/", "logo": site.ogImage | absUrl(site.url) }
 } | json | safe }}</script>
+{%- if page.url == "/" %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": site.url + "/#organization",
+  "name": site.name,
+  "url": site.url + "/",
+  "logo": site.ogImage | absUrl(site.url),
+  "description": "An independent, privately run guide for military families moving to Scott AFB, Illinois. Not affiliated with or endorsed by the U.S. Air Force, the Department of Defense, or Scott Air Force Base.",
+  "areaServed": { "@type": "Place", "name": "Scott AFB area and the St. Louis Metro East, Illinois" },
+  "publishingPrinciples": "/disclaimer/" | absUrl(site.url)
+} | json | safe }}</script>
+{%- endif %}
 {%- if breadcrumbs %}
 <script type="application/ld+json">{{ {
   "@context": "https://schema.org",
