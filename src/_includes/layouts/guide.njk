@@ -22,16 +22,59 @@
 {%- endif %}
 {% endblock %}
 {% block main %}
-<div class="layout">
-  <article class="content prose">
+{%- set sec = sections[section] if section else null %}
+{%- set body = content | headingIds %}
+{%- set tocItems = body | toc %}
+<article class="guide">
+<div class="page-hero page-hero--guide tone-{{ sec.tone if sec else 'sky' }}">
+  <div class="wrap page-hero__inner">
     {% include "breadcrumbs.njk" %}
     {% if sponsoredBy %}{% sponsoredArticleLabel sponsoredBy %}{% elif section %}{% categorySponsor section %}{% endif %}
+    {% if sec %}<a class="chip" href="{{ sec.url }}">{% icon section %}{{ sec.title }}</a>{% endif %}
     <h1>{{ title }}</h1>
-    <p class="meta">Published <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% if updated %} · <strong>Last verified <time datetime="{{ updated | isoDate }}">{{ updated | readableDate }}</time></strong>{% endif %}</p>
+    <p class="meta">{% icon "clock" %} Published <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% if updated %} · <strong>Last verified <time datetime="{{ updated | isoDate }}">{{ updated | readableDate }}</time></strong>{% endif %}</p>
     {% if lede %}<p class="lede">{{ lede }}</p>{% endif %}
-    {% if sponsoredBy %}<div data-sponsored-content>{{ content | safe }}</div><!--/sponsored-content-->{% else %}{{ content | safe }}{% endif %}
-    <p class="verify-note">Spotted something outdated? Rules, rates, and phone numbers change. Please verify with the official source linked above, and let us know so we can fix it.</p>
-  </article>
-  <div class="sidebar">{% include "related.njk" %}</div>
+  </div>
 </div>
+<div class="wrap">
+<div class="layout layout--guide">
+  <div class="content prose">
+    {%- if tocItems.length > 2 %}
+    <details class="toc toc--inline">
+      <summary>{% icon "list" %} On this page</summary>
+      <nav aria-label="On this page"><ol>{% for t in tocItems %}<li><a href="#{{ t.id }}">{{ t.text | safe }}</a></li>{% endfor %}</ol></nav>
+    </details>
+    {%- endif %}
+    {% if sponsoredBy %}<div data-sponsored-content>{{ body | safe }}</div><!--/sponsored-content-->{% else %}{{ body | safe }}{% endif %}
+    <p class="verify-note">Spotted something outdated? Rules, rates, and phone numbers change. Please verify with the official source linked above, and let us know so we can fix it.</p>
+  </div>
+  <aside class="sidebar" aria-label="Guide navigation">
+    {%- if tocItems.length > 2 %}
+    <nav class="toc toc--side" aria-label="On this page">
+      <h2 class="related__title">On this page</h2>
+      <ol>{% for t in tocItems %}<li><a href="#{{ t.id }}">{{ t.text | safe }}</a></li>{% endfor %}</ol>
+    </nav>
+    {%- endif %}
+    {% include "related.njk" %}
+  </aside>
+</div>
+{%- set others = collections.guides | rejectattr("url", "equalto", page.url) %}
+<section class="explore" aria-labelledby="keep-reading">
+  <h2 id="keep-reading" class="section-title">Keep reading</h2>
+  <ul class="cards cards--guides">
+    {%- for g in others %}{% include "guide-card.njk" %}{% endfor %}
+    {%- if sec %}
+    {%- set key = section %}{% set s = sec %}
+    <li class="card guide-card reveal">
+      <span class="card__icon tone-{{ sec.tone }}">{% icon section %}</span>
+      <p class="card__kicker">Topic hub</p>
+      <h3 class="card__title"><a class="card__link" href="{{ sec.url }}">{{ sec.title }}</a></h3>
+      <p>{{ sec.blurb }}</p>
+      <p class="card__meta">{% icon "arrow" %} Official links and more guides</p>
+    </li>
+    {%- endif %}
+  </ul>
+</section>
+</div>
+</article>
 {% endblock %}

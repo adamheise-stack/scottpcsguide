@@ -1,10 +1,10 @@
 [
-  { "title": "Housing & Neighborhoods", "url": "/housing/" },
-  { "title": "Schools", "url": "/schools/" },
-  { "title": "BAH", "url": "/bah/" },
-  { "title": "Childcare", "url": "/childcare/" },
-  { "title": "Moving Checklist", "url": "/moving-checklist/" },
-  { "title": "Local Services", "url": "/local-services/" },
-  { "title": "Things to Do", "url": "/things-to-do/" },
-  { "title": "About", "url": "/about/" }
+  { "title": "Housing & Neighborhoods", "short": "Housing", "url": "/housing/", "icon": "housing" },
+  { "title": "Schools", "short": "Schools", "url": "/schools/", "icon": "schools" },
+  { "title": "BAH", "short": "BAH", "url": "/bah/", "icon": "bah" },
+  { "title": "Childcare", "short": "Childcare", "url": "/childcare/", "icon": "childcare" },
+  { "title": "Moving Checklist", "short": "Moving", "url": "/moving-checklist/", "icon": "moving" },
+  { "title": "Local Services", "short": "Services", "url": "/local-services/", "icon": "local-services" },
+  { "title": "Things to Do", "short": "Things to Do", "url": "/things-to-do/", "icon": "things-to-do" },
+  { "title": "About", "short": "About", "url": "/about/", "icon": "info" }
 ]

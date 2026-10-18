@@ -6,9 +6,7 @@ permalink: /guides/
 description: "Every Scott PCS Guide guide in one place, including the first-week PCS checklist and 2026 BAH rates, for military families moving to Scott AFB, Illinois."
 lede: "Independent, sourced, and dated guides for Scott AFB families."
 ---
-<ul class="cards">
-{%- for g in collections.guides %}
-  <li class="card"><h3><a href="{{ g.url }}">{{ g.data.title }}</a></h3><p>{{ g.data.description }}</p><p class="small">Last verified {{ (g.data.updated or g.date) | readableDate }}</p></li>
-{%- endfor %}
+<ul class="cards cards--guides">
+{%- for g in collections.guides %}{% include "guide-card.njk" %}{% endfor %}
 </ul>
 <p>More guides are on the way: where to live, schools, base housing, lodging, and Illinois vs. Missouri.</p>

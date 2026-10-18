@@ -1,14 +1,14 @@
 {#- Hub-and-spoke internal links: start-here hub + sibling sections. -#}
 <nav class="related" aria-label="Related topics">
   <h2 class="related__title">Start here</h2>
-  <ul>
-    <li><a href="/guides/scott-afb-pcs-first-week-guide/">PCS to Scott AFB: first-week checklist</a></li>
-    <li><a href="/guides/scott-afb-bah-rates-2026/">Scott AFB BAH rates 2026</a></li>
+  <ul class="related__start">
+    <li><a href="/guides/scott-afb-pcs-first-week-guide/"{% if page.url == "/guides/scott-afb-pcs-first-week-guide/" %} aria-current="page"{% endif %}>{% icon "check" %}<span>PCS to Scott AFB: first-week checklist</span></a></li>
+    <li><a href="/guides/scott-afb-bah-rates-2026/"{% if page.url == "/guides/scott-afb-bah-rates-2026/" %} aria-current="page"{% endif %}>{% icon "bah" %}<span>Scott AFB BAH rates 2026</span></a></li>
   </ul>
   <h2 class="related__title">Topics</h2>
-  <ul>
+  <ul class="related__topics">
   {%- for key, s in sections %}{% if key != section or page.url != s.url %}
-    <li><a href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{{ s.title }}</a></li>
+    <li><a class="tone-{{ s.tone }}" href="{{ s.url }}"{% if page.url == s.url %} aria-current="page"{% endif %}>{% icon key %}<span>{{ s.title }}</span></a></li>
   {%- endif %}{% endfor %}
   </ul>
 </nav>

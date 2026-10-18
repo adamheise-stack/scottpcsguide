@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="{{ site.locale }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1d3557">
+<meta name="theme-color" content="#17324d">
+<script>(function(d){d.className="js rv";setTimeout(function(){if(!window.pcsReady)d.classList.remove("rv")},2500)})(document.documentElement)</script>
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/css/style.css">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
@@ -47,34 +48,56 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
+{% include "sprite.njk" %}
+<header class="site-header" id="top">
   <div class="wrap header-inner">
-    <a class="brand" href="/">{{ site.name }}<span class="brand__sub">Scott AFB, IL · Independent guide</span></a>
+    <a class="brand" href="/">{% include "logo.njk" %}<span class="brand__text"><span class="brand__name">{{ site.name }}</span><span class="brand__sub">Scott AFB, IL · Independent guide</span></span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">{% icon "menu", "menu-btn__open" %}{% icon "close", "menu-btn__close" %}<span class="menu-btn__label">Menu</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="site-nav__list">
+      {%- for item in nav %}
+        {%- set isCurrent = page.url.startsWith(item.url) or (section and sections[section] and sections[section].url == item.url) %}
+        <li><a class="nav-link" href="{{ item.url }}"{% if isCurrent %} aria-current="page"{% endif %}>{% icon item.icon, "nav-link__icon" %}<span class="nav-link__full">{{ item.title }}</span><span class="nav-link__short">{{ item.short }}</span></a></li>
+      {%- endfor %}
+        <li class="nav-cta"><a class="btn btn--primary" href="/guides/scott-afb-pcs-first-week-guide/">New to Scott? Start here {% icon "arrow" %}</a></li>
+      </ul>
+    </nav>
   </div>
-  <nav class="site-nav" aria-label="Main">
-    <ul class="wrap">
-    {%- for item in nav %}
-      <li><a href="{{ item.url }}"{% if page.url.startsWith(item.url) %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
-    {%- endfor %}
-    </ul>
-  </nav>
 </header>
-<main id="main" class="wrap">
+<main id="main">
 {% block main %}{{ content | safe }}{% endblock %}
 </main>
 <footer class="site-footer">
+  <svg class="footer-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 60V28c160-26 320-30 480-14s320 26 480 10 320-30 480-10v46Z"/></svg>
   <div class="wrap">
-    <p class="disclaimer"><strong>Independent site.</strong> {{ site.name }} is not affiliated with or endorsed by the U.S. Air Force, the Department of Defense, or Scott Air Force Base. Information may change; always verify with official sources before making decisions. Sponsored content is always labeled. <a href="/disclaimer/">Full disclaimer</a>.</p>
-    <ul class="footer-links">
-      <li><a href="/about/">About</a></li>
-      <li><a href="/disclaimer/">Disclaimer</a></li>
-      <li><a href="/privacy/">Privacy</a></li>
-      <li><a href="/guides/">All guides</a></li>
-      <li><a href="/about/#sponsorship">Sponsorship</a></li>
-    </ul>
-    <p class="small">&copy; 2026 {{ site.name }}</p>
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand brand--footer" href="/">{% include "logo.njk" %}<span class="brand__text"><span class="brand__name">{{ site.name }}</span><span class="brand__sub">{{ site.tagline }}</span></span></a>
+        <p class="disclaimer"><strong>Independent site.</strong> {{ site.name }} is not affiliated with or endorsed by the U.S. Air Force, the Department of Defense, or Scott Air Force Base. Information may change; always verify with official sources before making decisions. Sponsored content is always labeled. <a href="/disclaimer/">Full disclaimer</a>.</p>
+      </div>
+      <nav class="footer-map" aria-label="Site map">
+        <div>
+          <h2 class="footer-map__title">Topics</h2>
+          <ul>{% for key, s in sections %}<li><a href="{{ s.url }}">{{ s.title }}</a></li>{% endfor %}</ul>
+        </div>
+        <div>
+          <h2 class="footer-map__title">Guides</h2>
+          <ul>{% for g in collections.guides %}<li><a href="{{ g.url }}">{{ g.data.navTitle or g.data.title | replace(": Newcomers Checklist and First-Week Guide (2026)", ": first-week checklist") | replace(": Full Table and What It Covers Locally", "") }}</a></li>{% endfor %}<li><a href="/guides/">All guides</a></li></ul>
+        </div>
+        <div>
+          <h2 class="footer-map__title">This site</h2>
+          <ul class="footer-links"><li><a href="/about/">About</a></li><li><a href="/about/#sponsorship">Sponsorship</a></li><li><a href="/visitor-center/">Visitor center links</a></li><li><a href="/disclaimer/">Disclaimer</a></li><li><a href="/privacy/">Privacy</a></li></ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="small">&copy; 2026 {{ site.name }}</p>
+      <a class="footer-top" href="#top">Back to top {% icon "up" %}</a>
+    </div>
   </div>
 </footer>
+<a class="to-top" href="#top" aria-label="Back to top" tabindex="-1">{% icon "up" %}</a>
+<script src="/assets/js/site.js" defer></script>
 {%- if site.cfAnalyticsToken %}
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ site.cfAnalyticsToken }}"}'></script>
 {%- endif %}

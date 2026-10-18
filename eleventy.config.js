@@ -29,6 +29,25 @@ export default function (eleventyConfig) {
     return out;
   });
 
+  // Inline SVG icon from the sprite in _includes/sprite.njk (decorative, hidden from AT).
+  eleventyConfig.addShortcode("icon", (name, cls = "") =>
+    `<svg class="icon${cls ? " " + cls : ""}" aria-hidden="true" focusable="false"><use href="#i-${name}"></use></svg>`
+  );
+
+  // On-page table of contents for guides: give every <h2> an id, then list them.
+  const slugify = (t) => t.replace(/<[^>]+>/g, "").replace(/&[a-z#0-9]+;/gi, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  eleventyConfig.addFilter("headingIds", (html = "") => {
+    const seen = {};
+    return html.replace(/<h2>([\s\S]*?)<\/h2>/g, (m, inner) => {
+      let id = slugify(inner) || "section";
+      if (seen[id]) id += "-" + ++seen[id]; else seen[id] = 1;
+      return `<h2 id="${id}">${inner}</h2>`;
+    });
+  });
+  eleventyConfig.addFilter("toc", (html = "") =>
+    [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map((m) => ({ id: m[1], text: m[2].replace(/<[^>]+>/g, "") }))
+  );
+
   eleventyConfig.addFilter("readableDate", (d) =>
     new Date(d).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })
   );

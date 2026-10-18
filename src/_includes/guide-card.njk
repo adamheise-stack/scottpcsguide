@@ -1,0 +1,8 @@
+{%- set gs = sections[g.data.section] %}{%- set gicon = g.data.section or "list" %}
+<li class="card guide-card reveal">
+  <span class="card__icon tone-{{ gs.tone if gs else 'sky' }}">{% icon gicon %}</span>
+  {% if gs %}<p class="card__kicker">{{ gs.title }}</p>{% endif %}
+  <h3 class="card__title"><a class="card__link" href="{{ g.url }}">{{ g.data.title }}</a></h3>
+  <p>{{ g.data.description }}</p>
+  <p class="card__meta">{% icon "clock" %} Last verified {{ (g.data.updated or g.date) | readableDate }}</p>
+</li>

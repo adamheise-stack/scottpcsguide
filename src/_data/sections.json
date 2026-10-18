@@ -1,9 +1,9 @@
 {
-  "housing": { "title": "Housing & Neighborhoods", "url": "/housing/" },
-  "schools": { "title": "Schools", "url": "/schools/" },
-  "bah": { "title": "BAH", "url": "/bah/" },
-  "childcare": { "title": "Childcare", "url": "/childcare/" },
-  "moving": { "title": "Moving Checklist", "url": "/moving-checklist/" },
-  "local-services": { "title": "Local Services", "url": "/local-services/" },
-  "things-to-do": { "title": "Things to Do", "url": "/things-to-do/" }
+  "housing": { "title": "Housing & Neighborhoods", "url": "/housing/", "short": "Housing", "tone": "brick", "blurb": "On-base privatized housing, the housing referral office, and nearby communities." },
+  "schools": { "title": "Schools", "url": "/schools/", "short": "Schools", "tone": "sage", "blurb": "How school assignment works on and off base, and who can help." },
+  "bah": { "title": "BAH", "url": "/bah/", "short": "BAH", "tone": "wheat", "blurb": "2026 Scott AFB housing allowance rates and how they compare to local rents." },
+  "childcare": { "title": "Childcare", "url": "/childcare/", "short": "Childcare", "tone": "rose", "blurb": "Finding care, plus PCS childcare help for Air and Space Force families." },
+  "moving": { "title": "Moving Checklist", "url": "/moving-checklist/", "short": "Moving", "tone": "sky", "blurb": "A practical PCS checklist with official planning tools." },
+  "local-services": { "title": "Local Services", "url": "/local-services/", "short": "Services", "tone": "teal", "blurb": "Transit, utilities, and key support offices." },
+  "things-to-do": { "title": "Things to Do", "url": "/things-to-do/", "short": "Things to Do", "tone": "plum", "blurb": "Getting out and enjoying the Metro East and St. Louis." }
 }

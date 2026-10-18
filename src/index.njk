@@ -3,32 +3,63 @@ layout: layouts/base.njk
 seoTitle: "Scott PCS Guide: Moving to Scott AFB, Illinois"
 description: "Free, independent guides for military families PCSing to Scott AFB, Illinois: housing, schools, 2026 BAH, childcare, and a first-week checklist, sourced."
 ---
-<div class="layout">
-<div class="content prose">
-  <h1>Moving to Scott AFB? Welcome to the neighborhood.</h1>
-  <p class="lede">{{ site.name }} is a free, independent guide for military families PCSing to or living at Scott Air Force Base in the Illinois side of the St. Louis metro. We gather what's useful, link the official sources, and date our facts so you know how fresh they are.</p>
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"><span class="blob blob--a"></span><span class="blob blob--b"></span><span class="blob blob--c"></span></div>
+  <div class="wrap hero__inner">
+    <div class="hero__text">
+      <p class="hero__eyebrow">{% icon "local-services" %} Scott AFB &amp; the St. Louis Metro East</p>
+      <h1>Moving to Scott AFB? Welcome to the neighborhood.</h1>
+      <p class="lede">{{ site.name }} is a free, independent guide for military families PCSing to or living at Scott Air Force Base in the Illinois side of the St. Louis metro. We gather what's useful, link the official sources, and date our facts so you know how fresh they are.</p>
+      <div class="hero__ctas">
+        <a class="btn btn--primary" href="/guides/scott-afb-pcs-first-week-guide/">Start with the first-week checklist {% icon "arrow" %}</a>
+        <a class="btn btn--ghost" href="#topics">Browse topics</a>
+      </div>
+      <ul class="hero__facts">
+        <li>{% icon "check" %} Free &amp; independent</li>
+        <li>{% icon "check" %} Official sources linked</li>
+        <li>{% icon "check" %} Every fact dated</li>
+      </ul>
+    </div>
+    <div class="hero__art">{% include "hero-art.njk" %}</div>
+  </div>
+</section>
 
+<div class="wrap home">
   {% sponsorBanner %}
 
-  <h2>Start here</h2>
-  <ul class="cards">
-  {%- for g in collections.guides %}
-    <li class="card"><h3><a href="{{ g.url }}">{{ g.data.title }}</a></h3><p>{{ g.data.description }}</p><p class="small">Last verified {{ (g.data.updated or g.date) | readableDate }}</p></li>
-  {%- endfor %}
-  </ul>
+  <section class="home-section" aria-labelledby="start-title">
+    <div class="section-head">
+      <p class="eyebrow">New to Scott?</p>
+      <h2 id="start-title" class="section-title">Start here</h2>
+      <p class="section-sub">Just got orders? Follow these four steps in order. Each one links to the official office that has the final word.</p>
+    </div>
+    <ol class="path">
+      <li class="path__step reveal"><span class="path__num" aria-hidden="true">1</span><div><h3><a href="/guides/scott-afb-pcs-first-week-guide/">Get the first-week checklist</a></h3><p>What to do 60, 30, and 7 days out, plus your first week, with the numbers worth saving.</p></div></li>
+      <li class="path__step reveal"><span class="path__num" aria-hidden="true">2</span><div><h3><a href="/guides/scott-afb-bah-rates-2026/">Know your 2026 BAH</a></h3><p>The full Scott AFB rate table, so you can set a housing budget.</p></div></li>
+      <li class="path__step reveal"><span class="path__num" aria-hidden="true">3</span><div><h3><a href="/housing/">Pick where to live</a></h3><p>On-base housing, the referral office, and nearby towns.</p></div></li>
+      <li class="path__step reveal"><span class="path__num" aria-hidden="true">4</span><div><h3><a href="/schools/">Check schools before you sign</a></h3><p>School assignment follows your address, so look before you lease.</p></div></li>
+    </ol>
+  </section>
 
-  <h2>Browse by topic</h2>
-  <ul class="cards">
-    <li class="card"><h3><a href="/housing/">Housing &amp; Neighborhoods</a></h3><p>On-base privatized housing, the housing referral office, and nearby communities.</p></li>
-    <li class="card"><h3><a href="/schools/">Schools</a></h3><p>How school assignment works on and off base, and who can help.</p></li>
-    <li class="card"><h3><a href="/bah/">BAH</a></h3><p>2026 Scott AFB housing allowance rates and how they compare to local rents.</p></li>
-    <li class="card"><h3><a href="/childcare/">Childcare</a></h3><p>Finding care, plus PCS childcare help for Air and Space Force families.</p></li>
-    <li class="card"><h3><a href="/moving-checklist/">Moving Checklist</a></h3><p>A practical PCS checklist with official planning tools.</p></li>
-    <li class="card"><h3><a href="/local-services/">Local Services</a></h3><p>Transit, utilities, and key support offices.</p></li>
-    <li class="card"><h3><a href="/things-to-do/">Things to Do</a></h3><p>Getting out and enjoying the Metro East and St. Louis.</p></li>
-  </ul>
+  <section class="home-section" id="topics" aria-labelledby="topics-title">
+    <div class="section-head">
+      <p class="eyebrow">Browse by topic</p>
+      <h2 id="topics-title" class="section-title">Everything for your move, in 7 topics</h2>
+    </div>
+    <ul class="topics">
+    {%- for key, s in sections %}{% include "topic-card.njk" %}{% endfor %}
+    </ul>
+  </section>
 
-  <div class="callout"><p><strong>Heads up:</strong> we're an independent site, not an official Air Force or DoD resource. For anything that affects your orders, pay, or housing, confirm with the official office we link.</p></div>
-</div>
-<div class="sidebar">{% include "related.njk" %}</div>
+  <section class="home-section" aria-labelledby="guides-title">
+    <div class="section-head section-head--row">
+      <div><p class="eyebrow">Guides</p><h2 id="guides-title" class="section-title">Latest guides</h2></div>
+      <a class="more-link" href="/guides/">All guides {% icon "arrow" %}</a>
+    </div>
+    <ul class="cards cards--guides">
+    {%- for g in collections.guides %}{% include "guide-card.njk" %}{% endfor %}
+    </ul>
+  </section>
+
+  <div class="callout callout--note reveal">{% icon "info" %}<p><strong>Heads up:</strong> we're an independent site, not an official Air Force or DoD resource. For anything that affects your orders, pay, or housing, confirm with the official office we link.</p></div>
 </div>
