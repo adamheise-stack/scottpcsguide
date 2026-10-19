@@ -29,7 +29,7 @@ Most "things to do near Scott" lists are long and undated, with no hint of what 
 
 ## Free in St. Louis (about 20 miles away)
 
-[USTRANSCOM's base information page](https://www.ustranscom.mil/cmd/base-information.cfm) puts Scott AFB about 20 miles from downtown St. Louis.
+[MilitaryINSTALLATIONS' Scott AFB overview](https://installations.militaryonesource.mil/in-depth-overview/scott-air-force-base) puts Scott AFB about 20 miles east of St. Louis.
 
 - **Forest Park.** [Forest Park Forever](https://www.forestparkforever.org/visit) describes a free, 1,300-acre park with more than 30 miles of paths and trails. It's home to five major cultural institutions: the Saint Louis Art Museum, the Saint Louis Science Center, the Missouri History Museum, The Muny, and the Saint Louis Zoo.
 - **Saint Louis Zoo.** [Admission is free](https://www.stlzoo.org/visit/), and the Zoo is open daily. It also sells an optional one-day Adventure Pass.
@@ -77,6 +77,6 @@ The [375th Force Support Squadron](https://375fss.com/) runs base recreation and
 - [375th FSS](https://375fss.com/) and [Outdoor Recreation](https://375fss.com/outdoor-recreation/outdoor-recreation-facility-overview/)
 - [Cahokia Mounds State Historic Site](https://cahokiamounds.org/)
 - [Metro East Park & Recreation District: Tourism](https://www.metroeastrecreation.com/tourism.html) and [Great Rivers & Routes](https://www.riversandroutes.com/)
-- [USTRANSCOM: Base information](https://www.ustranscom.mil/cmd/base-information.cfm)
+- [MilitaryINSTALLATIONS: Scott AFB in-depth overview](https://installations.militaryonesource.mil/in-depth-overview/scott-air-force-base) (accessed October 19, 2026; replaces a retired USTRANSCOM page)
 
 All sources were accessed October 18, 2026.

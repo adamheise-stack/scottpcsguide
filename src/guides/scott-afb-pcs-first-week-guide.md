@@ -85,7 +85,7 @@ Congratulations on your orders! Scott sits in the Metro East, the Illinois side 
 
 ## Getting around without a car (yet)
 
-- **MetroLink:** the Red Line runs between St. Louis Lambert Airport and the [Shiloh-Scott station](https://www.metrostlouis.org/metrolink-station/shiloh-scott-station/). [USTRANSCOM](https://www.ustranscom.mil/cmd/base-information.cfm) estimates the trip at about 1 hour 15 minutes, and asking your sponsor to meet you is a good idea.
+- **MetroLink:** the Red Line runs between St. Louis Lambert Airport and the [Shiloh-Scott station](https://www.metrostlouis.org/metrolink-station/shiloh-scott-station/). [MilitaryINSTALLATIONS](https://installations.militaryonesource.mil/in-depth-overview/scott-air-force-base) estimates the trip at about 1 hour 15 minutes, and asking your sponsor to meet you is a good idea.
 - **SCCTD Flyer:** an on-demand shared ride within a [Scott AFB service zone](https://scctd.org/scott-air-force-base-safb-flyer-service-zone/) that connects to MetroLink and to places like the BX, commissary, clinic, pharmacy, and base housing. Checked October 18, 2026, fares were $3 per one-way trip within the base zone, with no cash accepted.
 - **MidAmerica St. Louis Airport:** SCCTD runs a [shuttle](https://scctd.org/services/midamerica-airport-shuttle/) between the Shiloh-Scott station and the airport terminal, about a 20-minute trip.
 
@@ -108,7 +108,7 @@ From late fall through winter, MilitaryINSTALLATIONS says you can check base con
 - [Scott AFB School Liaison Office](https://www.scott.af.mil/Newcomers/School-Liaison-Office/) (scott.af.mil)
 - [MilitaryINSTALLATIONS: Scott AFB overview](https://installations.militaryonesource.mil/military-installation/scott-air-force-base), [check-in procedures](https://installations.militaryonesource.mil/military-installation/scott-air-force-base/base-essentials/check-in-procedures), and [housing](https://installations.militaryonesource.mil/military-installation/scott-air-force-base/housing/housing) (Military OneSource)
 - [Scott AFB M&FRC Relocation Assistance](https://scottmfrc.com/Relocation-Assistance) and [workshop calendar](https://www.scottmfrc.com/Relocation-Workshops)
-- [USTRANSCOM: Base and local information](https://www.ustranscom.mil/cmd/base-information.cfm)
+- [MilitaryINSTALLATIONS: Scott AFB in-depth overview](https://installations.militaryonesource.mil/in-depth-overview/scott-air-force-base) (accessed October 19, 2026; replaces a retired USTRANSCOM page)
 - [Metro Transit: Shiloh-Scott station](https://www.metrostlouis.org/metrolink-station/shiloh-scott-station/); [SCCTD Flyer: Scott AFB zone](https://scctd.org/scott-air-force-base-safb-flyer-service-zone/); [SCCTD MidAmerica shuttle](https://scctd.org/services/midamerica-airport-shuttle/)
 
 All sources were accessed October 18, 2026. Next up: guides to [where to live](/housing/) and [schools](/schools/).
