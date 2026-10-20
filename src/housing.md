@@ -63,7 +63,7 @@ Compare listings with your housing allowance. Our [2026 Scott AFB BAH guide](/gu
 - [MilitaryINSTALLATIONS: Scott AFB housing](https://installations.militaryonesource.mil/military-installation/scott-air-force-base/housing/housing)
 - [Scott AFB M&FRC Relocation Assistance](https://scottmfrc.com/Relocation-Assistance)
 
-A neighborhood-by-neighborhood guide is in the works.
+Comparing towns? Our [Best Places to Live Near Scott AFB](/guides/best-places-to-live-near-scott-afb/) guide puts distance, rent, home values, school districts and MetroLink side by side.
 
 ## Frequently asked questions
 
