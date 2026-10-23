@@ -30,7 +30,7 @@ Picking a home sets your commute, your school district and your monthly budget a
 ## Step 1: Talk to the Military Housing Referral Office
 
 - **One office for both paths.** [MilitaryINSTALLATIONS](https://installations.militaryonesource.mil/military-installation/scott-air-force-base/housing/housing) (accessed October 18, 2026) says prospective residents should begin their application with the Military Housing Referral Office, at 618-256-4900. It's also a good first call if you're leaning toward off base.
-- **Lodging while you look.** The [Scott AFB Newcomers page](https://www.scott.af.mil/Newcomers/) says incoming PCS personnel can stay up to 30 days in Temporary Lodging Facilities and house hunters 10 days, if space is available. Call 618-256-2045 to request a reservation as soon as you know your arrival date.
+- **Lodging while you look.** The [Scott AFB Newcomers page](https://www.scott.af.mil/Newcomers/) says incoming PCS personnel can stay up to 30 days in Temporary Lodging Facilities and house hunters 10 days, if space is available. Call 618-256-2045 to request a reservation as soon as you know your arrival date. Our [lodging and TLF guide](/guides/scott-afb-lodging-tlf-guide/) covers rates, pet units, and TLE.
 
 ## On base: Scott Family Housing
 

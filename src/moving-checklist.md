@@ -37,7 +37,7 @@ Your orders, your gaining unit and the base offices always have the final word, 
 
 ## 30 to 60 days out
 
-- [ ] Request temporary lodging as soon as you know your arrival date. The [Newcomers page](https://www.scott.af.mil/Newcomers/) says reservation requests go to 618-256-2045, members must try military lodging first, and you'll need a copy of your PCS orders. Incoming PCS families can stay up to 30 days if space is available. See our [first-week guide](/guides/scott-afb-pcs-first-week-guide/).
+- [ ] Request temporary lodging as soon as you know your arrival date. The [Newcomers page](https://www.scott.af.mil/Newcomers/) says reservation requests go to 618-256-2045, members must try military lodging first, and you'll need a copy of your PCS orders. Incoming PCS families can stay up to 30 days if space is available. See our [Scott AFB lodging and TLF guide](/guides/scott-afb-lodging-tlf-guide/) for rates, pets, and TLE, and our [first-week guide](/guides/scott-afb-pcs-first-week-guide/) for the timeline.
 - [ ] Contact the Military Housing Referral Office (618-256-4900) and the School Liaison Office (618-256-9595). See [Housing](/housing/) and [Schools](/schools/).
 - [ ] Look up the school district for any address before you sign a lease.
 - [ ] Set up mail. The M&FRC says the Scott AFB Postal Service Center gives newcomers a free post office box during the transition (618-256-2956).
